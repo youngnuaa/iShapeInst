@@ -1,0 +1,50 @@
+MODEL:
+  META_ARCHITECTURE: "SparseInst"
+  #WEIGHTS: "/home/wangyang/.cache/torch/hub/checkpoints/R-50.pkl"
+  PIXEL_MEAN: [123.675, 116.280, 103.530]
+  PIXEL_STD: [58.395, 57.120, 57.375]
+  BACKBONE:
+    FREEZE_AT: 0
+    NAME: "build_dla_backbone"
+  RESNETS:
+    NORM: "FrozenBN"
+    DEPTH: 50
+    STRIDE_IN_1X1: False
+    OUT_FEATURES: ["res3", "res4", "res5"]
+  SPARSE_INST:
+    ENCODER:
+      NAME: "InstanceContextEncoder"
+    DECODER:
+      NAME: "GroupIAMDecoder"
+DATASETS:
+  TRAIN: ("ishape_instance_train",)
+  TEST:  ("ishape_instance_val",)
+SOLVER:
+  IMS_PER_BATCH: 24
+  BASE_LR: 0.01
+  STEPS: (1800, 24000)
+  MAX_ITER: 2000
+  WEIGHT_DECAY: 5e-5
+  CHECKPOINT_PERIOD: 500
+  LR_SCHEDULER_NAME: "WarmupPolyLR"
+  #POLY_LR_POWER: 0.9
+  WARMUP_ITERS: 500
+  WARMUP_FACTOR: 0.002
+  WARMUP_METHOD: "linear"
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_VALUE: 35.0
+
+INPUT:
+  MIN_SIZE_TRAIN: (416, 448, 480, 512, 544, 576, 608, 640)
+  MAX_SIZE_TRAIN: 853
+  MIN_SIZE_TEST: 640
+  MAX_SIZE_TEST: 853
+  RANDOM_FLIP: "horizontal"
+  FORMAT: "RGB"
+  MASK_FORMAT: "bitmask"
+TEST:
+  EVAL_PERIOD: 1000000
+DATALOADER:
+  NUM_WORKERS: 6
+VERSION: 2
