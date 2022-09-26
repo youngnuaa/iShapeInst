@@ -83,7 +83,13 @@ python try_test_net.py --config-file configs/sparse_inst_r50_giam.yaml MODEL.WEI
 
 ### Training iShapeInst
 
+To train the iShapeInst model on iShape dataset. If GPU memory is limited, it doesn't matter and you can reduce the batch size through `SOLVER.IMS_PER_BATCH` or reduce the input size. If you adjust the batch size, learning schedule should be adjusted according to the linear scaling rule.
 
+```bash
+python train_net.py --config-file <CONFIG> --num-gpus 1 
+# example
+python train_net.py --config-file configs/sparse_inst_r50_giam.yaml --num-gpus 1
+```
 
 
 ## Acknowledgements
