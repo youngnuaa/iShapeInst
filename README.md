@@ -62,6 +62,7 @@ python setup.py build develop
 
 ## Getting Start
 
+Before testing or training, you need to first modify lines 511-517 of `sparseinst/register_ishape_instance.py` to update the information of the dataset
 
 ### Testing iShapeInst
 
