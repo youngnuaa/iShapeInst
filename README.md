@@ -65,39 +65,16 @@ python setup.py build develop
 
 ### Testing iShapeInst
 
-Before testing, you should specify the config file `<CONFIG>` and the model weights `<MODEL-PATH>`. In addition, you can change the input size by setting the `INPUT.MIN_SIZE_TEST` in both config file or commandline.
 
-* [Performance Evaluation] To obtain the evaluation results, *e.g.*, mask AP on COCO, you can run:
-
-```bash
-python train_net.py --config-file <CONFIG> --num-gpus <GPUS> --eval MODEL.WEIGHTS <MODEL-PATH>
-# example:
-python train_net.py --config-file configs/sparse_inst_r50_giam.yaml --num-gpus 8 --eval MODEL.WEIGHTS sparse_inst_r50_giam_aug_2b7d68.pth
-```
-
-* [Inference Speed] To obtain the inference speed (FPS) on one GPU device, you can run:
-
-```bash
-python test_net.py --config-file <CONFIG> MODEL.WEIGHTS <MODEL-PATH> INPUT.MIN_SIZE_TEST 512
-# example:
-python test_net.py --config-file configs/sparse_inst_r50_giam.yaml MODEL.WEIGHTS sparse_inst_r50_giam_aug_2b7d68.pth INPUT.MIN_SIZE_TEST 512
-```
 
 **Note:** 
 * The `test_net.py` only supports **1 GPU** and **1 image per batch** for measuring inference speed.
 * The inference time consists of the *pure forward time* and the *post-processing time*. While the evaluation processing, data loading, and pre-processing for wrappers (*e.g.*, ImageList) are not included.
-* `COCOMaskEvaluator` is modified from [`COCOEvaluator`](https://github.com/facebookresearch/detectron2/blob/main/detectron2/evaluation/coco_evaluation.py) for evaluating mask-only results.
 
 
 ### Training iShapeInst
 
-To train the iShapeInst model on COCO dataset with 8 GPUs. 8 GPUs are required for the training. If you only have 4 GPUs or GPU memory is limited, it doesn't matter and you can reduce the batch size through `SOLVER.IMS_PER_BATCH` or reduce the input size. If you adjust the batch size, learning schedule should be adjusted according to the linear scaling rule.
 
-```bash
-python train_net.py --config-file <CONFIG> --num-gpus 8 
-# example
-python train_net.py --config-file configs/sparse_inst_r50vd_dcn_giam_aug.yaml --num-gpus 8
-```
 
 
 ## Acknowledgements
