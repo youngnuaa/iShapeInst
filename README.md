@@ -17,7 +17,7 @@ prior instance segmentation methods rarely focus on irregularly shaped object, w
 results show that iShapeInst can achieve state-of-the-art performance on six types of irregularly shaped object datasets, surpassing existing methods by 22.3% mmap and obtaining 31.5 FPS processing speed. We hope iShapeInst can serve as a strong baseline of instance segmentation for irregularly shaped objects. 
 
 <div align="center">
-<img src="resources/ishapefcn.jpg">
+<img src="resources/ishape.jpg">
 </div>
 
 
