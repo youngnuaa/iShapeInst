@@ -30,6 +30,16 @@ All models are trained on MS-COCO [iShape dataset](https://ylshare.oss-cn-shangh
 
 | model | backbone | Antenna | Branch | Fence | Hanger | Log | Wire | Average | weights
 | :---- | :------  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Mask RCNN | Resnet-50 | 16.9 | 4.2 | 0.0 | 22.1 | 32.6 | 0.0 | 12.63  | [model]() |
+| PolarMask | Resnet-50 | 0.0 | 0.0 | 0.0 | 0.0 | 18.6 | 0.0 | 3.10  | [model]() |
+| SE | Resnet-50 | 38.3 | 0.0 | 0.0 | 49.8 | 20.9 | 0.0 | 18.17  | [model]() |
+| SOLOv2 | Resnet-50 | 6.6 | 27.5 | 0.0 | 28.8 | 22.2 | 0.0 | 14.07  | [model]() |
+| DETR | Resnet-50 | 2.1 | 2.6 | 0.0 | 32.2 | 46.2 | 0.0 | 13.85  | [model]() |
+| SOLQ | Resnet-50 | 11.7 | 15.2 | 0.0 | 4.2 | 3.8 | 33.9 | 26.82 | 19.3  | [model]() |
+| QueryInst | Resnet-50 | 1.1 | 4.8 | 0.0 | 17.6 | 26.1 | 0.2 | 8.30  | [model]() |
+| SparseInst | Resnet-50d | 20.6 | 49.1 | 72.1 | 42.8 | 51.6 | 50.0 | 47.70  | [model]() |
+| GMIS | Resnet-50 | 67.6 | 14.9 | 30.6 | 24.8 | 63.2 | 46.1 | 41.21  | [model]() |
+| ASIS | Resnet-50 | 88.5 | 24.6 | 60.4 | 57.4 | 69.4 | 77.3 | 62.93  | [model]() |
 | iShapeInst | [DLA-34]() | 84.1 | 86.8 | 94.2 | 81.7 | 78.2 | 86.4 | 85.23  | [model]() |
 
 
@@ -79,9 +89,9 @@ python test_net.py --config-file configs/sparse_inst_r50_giam.yaml MODEL.WEIGHTS
 * `COCOMaskEvaluator` is modified from [`COCOEvaluator`](https://github.com/facebookresearch/detectron2/blob/main/detectron2/evaluation/coco_evaluation.py) for evaluating mask-only results.
 
 
-### Training SparseInst
+### Training iShapeInst
 
-To train the SparseInst model on COCO dataset with 8 GPUs. 8 GPUs are required for the training. If you only have 4 GPUs or GPU memory is limited, it doesn't matter and you can reduce the batch size through `SOLVER.IMS_PER_BATCH` or reduce the input size. If you adjust the batch size, learning schedule should be adjusted according to the linear scaling rule.
+To train the iShapeInst model on COCO dataset with 8 GPUs. 8 GPUs are required for the training. If you only have 4 GPUs or GPU memory is limited, it doesn't matter and you can reduce the batch size through `SOLVER.IMS_PER_BATCH` or reduce the input size. If you adjust the batch size, learning schedule should be adjusted according to the linear scaling rule.
 
 ```bash
 python train_net.py --config-file <CONFIG> --num-gpus 8 
@@ -93,12 +103,12 @@ python train_net.py --config-file configs/sparse_inst_r50vd_dcn_giam_aug.yaml --
 ## Acknowledgements
 
 
-iShapeInst is based on [detectron2](https://github.com/facebookresearch/detectron2),[sparseinst](https://github.com/hustvl/SparseInst), [OneNet](https://github.com/PeizeSun/OneNet), [DETR](https://github.com/facebookresearch/detr), and [timm](https://github.com/rwightman/pytorch-image-models), and we sincerely thanks for their code and contribution to the community!
+iShapeInst is based on [detectron2](https://github.com/facebookresearch/detectron2),[SparseInst](https://github.com/hustvl/SparseInst), [OneNet](https://github.com/PeizeSun/OneNet), [DETR](https://github.com/facebookresearch/detr), and [timm](https://github.com/rwightman/pytorch-image-models), and we sincerely thanks for their code and contribution to the community!
 
 
-## Citing SparseInst
+## Citing iShapeInst
 
-If you find SparseInst is useful in your research or applications, please consider giving us a star &#127775; and citing SparseInst by the following BibTeX entry.
+If you find iShapeInst is useful in your research or applications, please consider giving us a star &#127775; and citing SparseInst by the following BibTeX entry.
 
 
 ## License
