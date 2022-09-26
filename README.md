@@ -65,10 +65,18 @@ python setup.py build develop
 
 ### Testing iShapeInst
 
+Before testing, you should specify the config file `<CONFIG>` and the model weights `<MODEL-PATH>`. In addition, you can change the input size by setting the `INPUT.MIN_SIZE_TEST` in both config file or commandline.
 
+* [Performance Evaluation] To obtain the Inference Speed and evaluation results , *e.g.*, mask AP on iShape dataset, you can run:
+
+```bash
+python try_test_net.py --config-file <CONFIG>  MODEL.WEIGHTS <MODEL-PATH>
+# example:
+python try_test_net.py --config-file configs/sparse_inst_r50_giam.yaml MODEL.WEIGHTS model_final.pth
+```
 
 **Note:** 
-* The `test_net.py` only supports **1 GPU** and **1 image per batch** for measuring inference speed.
+* The `try_test_net.py` only supports **1 GPU** and **1 image per batch** for measuring inference speed.
 * The inference time consists of the *pure forward time* and the *post-processing time*. While the evaluation processing, data loading, and pre-processing for wrappers (*e.g.*, ImageList) are not included.
 
 
@@ -80,7 +88,7 @@ python setup.py build develop
 ## Acknowledgements
 
 
-iShapeInst is based on [detectron2](https://github.com/facebookresearch/detectron2),[SparseInst](https://github.com/hustvl/SparseInst), [OneNet](https://github.com/PeizeSun/OneNet), [DETR](https://github.com/facebookresearch/detr), and [timm](https://github.com/rwightman/pytorch-image-models), and we sincerely thanks for their code and contribution to the community!
+iShapeInst is based on [detectron2](https://github.com/facebookresearch/detectron2), [SparseInst](https://github.com/hustvl/SparseInst), [OneNet](https://github.com/PeizeSun/OneNet), [DETR](https://github.com/facebookresearch/detr), and [timm](https://github.com/rwightman/pytorch-image-models), and we sincerely thanks for their code and contribution to the community!
 
 
 ## Citing iShapeInst
