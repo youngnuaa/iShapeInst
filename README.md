@@ -34,7 +34,7 @@ All models are trained on MS-COCO [iShape dataset](https://ylshare.oss-cn-shangh
 | PolarMask | Resnet-50 | 0.0 | 0.0 | 0.0 | 0.0 | 18.6 | 0.0 | 3.10  | model |
 | SE | Resnet-50 | 38.3 | 0.0 | 0.0 | 49.8 | 20.9 | 0.0 | 18.17  | model |
 | SOLOv2 | Resnet-50 | 6.6 | 27.5 | 0.0 | 28.8 | 22.2 | 0.0 | 14.07  | [model]() |
-| DETR | Resnet-50 | 2.1 | 2.6 | 0.0 | 32.2 | 46.2 | 0.0 | 13.85  | [model] |
+| DETR | Resnet-50 | 2.1 | 2.6 | 0.0 | 32.2 | 46.2 | 0.0 | 13.85  | model |
 | SOLQ | Resnet-50 | 11.7 | 15.2 | 0.0 | 4.2 | 3.8 | 33.9 | 26.82 | [model]() |
 | QueryInst | Resnet-50 | 1.1 | 4.8 | 0.0 | 17.6 | 26.1 | 0.2 | 8.30  | [model]() |
 | SparseInst | Resnet-50d | 20.6 | 49.1 | 72.1 | 42.8 | 51.6 | 50.0 | 47.70  | [model]() |
