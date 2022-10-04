@@ -30,7 +30,7 @@ All models are trained on MS-COCO [iShape dataset](https://ylshare.oss-cn-shangh
 
 | model | backbone | Antenna | Branch | Fence | Hanger | Log | Wire | Average | weights
 | :---- | :------  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Mask RCNN | Resnet-50 | 16.9 | 4.2 | 0.0 | 22.1 | 32.6 | 0.0 | 12.63  | [model]() |
+| Mask RCNN | Resnet-50 | 16.9 | 4.2 | 0.0 | 22.1 | 32.6 | 0.0 | 12.63  | [model](https://pan.baidu.com/s/1GNIPMSmkzWjHE2g8rmuKYA?pwd=hj7d ) |
 | PolarMask | Resnet-50 | 0.0 | 0.0 | 0.0 | 0.0 | 18.6 | 0.0 | 3.10  | [model]() |
 | SE | Resnet-50 | 38.3 | 0.0 | 0.0 | 49.8 | 20.9 | 0.0 | 18.17  | [model]() |
 | SOLOv2 | Resnet-50 | 6.6 | 27.5 | 0.0 | 28.8 | 22.2 | 0.0 | 14.07  | [model]() |
