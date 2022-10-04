@@ -100,9 +100,9 @@ iShapeInst is based on [detectron2](https://github.com/facebookresearch/detectro
 
 ## Citing iShapeInst
 
-If you find iShapeInst is useful in your research or applications, please consider giving us a star &#127775; and citing SparseInst by the following BibTeX entry.
+If you find iShapeInst is useful in your research or applications, please consider giving us a star &#127775; and citing iShapeInst by the following BibTeX entry.
 
 
 ## License
 
-SparseInst is released under the [MIT Licence](LICENSE).
+iShapeInst is released under the [MIT Licence](LICENSE).
