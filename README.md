@@ -37,7 +37,7 @@ All models are trained on MS-COCO [iShape dataset](https://ylshare.oss-cn-shangh
 | DETR | Resnet-50 | 2.1 | 2.6 | 0.0 | 32.2 | 46.2 | 0.0 | 13.85  | model |
 | SOLQ | Resnet-50 | 11.7 | 15.2 | 0.0 | 4.2 | 3.8 | 33.9 | 26.82 | [model](https://pan.baidu.com/s/1sZkCnNe_YFlIDpE9Lv3B9Q?pwd=vycz) |
 | QueryInst | Resnet-50 | 1.1 | 4.8 | 0.0 | 17.6 | 26.1 | 0.2 | 8.30  | [model]() |
-| SparseInst | Resnet-50d | 20.6 | 49.1 | 72.1 | 42.8 | 51.6 | 50.0 | 47.70  | [model](https://pan.baidu.com/s/1hwrkywjSrd-7e5xey76VfQ?pwd=pl4f) |
+| SparseInst | Resnet-50d | 20.6 | 49.1 | 72.1 | 42.8 | 51.6 | 50.0 | 47.70  | [model](https://pan.baidu.com/s/1ayLOxE8yDOsnFaAasGzndg?pwd=aa3w ) |
 | GMIS | Resnet-50 | 67.6 | 14.9 | 30.6 | 24.8 | 63.2 | 46.1 | 41.21  | model |
 | ASIS | Resnet-50 | 88.5 | 24.6 | 60.4 | 57.4 | 69.4 | 77.3 | 62.93  | model |
 | iShapeInst | [DLA-34]() | 84.1 | 86.8 | 94.2 | 81.7 | 78.2 | 86.4 | 85.23  | [model]() |
