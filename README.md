@@ -40,7 +40,7 @@ All models are trained on MS-COCO [iShape dataset](https://ylshare.oss-cn-shangh
 | SparseInst | Resnet-50d | 20.6 | 49.1 | 72.1 | 42.8 | 51.6 | 50.0 | 47.70  | [model](https://pan.baidu.com/s/1ayLOxE8yDOsnFaAasGzndg?pwd=aa3w ) |
 | GMIS | Resnet-50 | 67.6 | 14.9 | 30.6 | 24.8 | 63.2 | 46.1 | 41.21  | model |
 | ASIS | Resnet-50 | 88.5 | 24.6 | 60.4 | 57.4 | 69.4 | 77.3 | 62.93  | model |
-| iShapeInst | DLA-34 | 84.1 | 86.8 | 94.2 | 81.7 | 78.2 | 86.4 | 85.23  | [model]() |
+| iShapeInst | DLA-34 | 84.1 | 86.8 | 94.2 | 81.7 | 78.2 | 86.4 | 85.23  | [model](https://pan.baidu.com/s/1b8ML62FMNpU5iStSg4BlYw?pwd=jcaw) |
 
 
 ## Installation and Prerequisites
